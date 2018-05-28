@@ -1,0 +1,37 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../res/core/lightning.png" />
+  <view class="page__title">登录电费系统</view>
+  <view class="page__desc">提供查询，充值功能</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">学号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="" value="{{username}}" bindinput="usernameInput" />
+      </view>
+    </view>
+   
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      
+      <view class="weui-cell__bd">
+        <input class="weui-input" password='true' value="{{password}}" bindinput="passwordInput" />
+     </view>
+    </view>
+
+          
+    
+  </view>
+
+  <view class="weui-cells__tips">* 默认密码为身份证后6位<text style="font-weight:bold;">\t\t数字</text></view>
+
+  <view class="button-sp-area">
+    <button bindtap="btnClick" class="weui-btn" type="primary" plain="true">登录</button>
+  </view>
+
+</view>

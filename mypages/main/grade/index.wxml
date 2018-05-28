@@ -1,0 +1,29 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../res/core/exam.png" />
+  <view class="page__title">成绩查询</view>
+  <view class="page__desc">成绩数据均来源于学校教务系统</view>
+</view>
+<view class="page__bd">
+ <view class="weui-tab__content" >  
+          <view class="weui-cells">
+            <view class="weui-cell weui-cell_select">
+              <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">学年</view>
+              </view>
+              <view class="weui-cell__bd">
+                <picker name="xnPicker" value="{{xnIndex}}" bindchange="xnPicker" range="{{xn}}">
+                  <view class="weui-select weui-select_in-select-after">{{xn[xnIndex]}}</view>
+                </picker>
+              </view>
+            </view>
+      </view>
+   </view>
+  <view class="button-sp-area">
+    <button bindtap="search" class="weui-btn" type="primary" plain="true">查询学年成绩</button>
+    <button bindtap="searchall" class="weui-btn" type="default" plain="true">查询全部成绩</button>
+  </view>
+   <view class="weui-cells__tips">* 全部成绩是大学入学以来至今的所有科目成绩</view>
+
+
+   
+</view>

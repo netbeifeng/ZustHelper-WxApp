@@ -1,0 +1,118 @@
+<!--login.wxml-->
+<view class="container3">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="../res/more/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="../res/more/title.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+          <image class="logo" src="../res/more/logop.png"></image>
+          <image class="wave" src="../res/more/wave.png" mode="aspectFill"></image>
+          <image class="wave wave-bg" src="../res/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <form class="login-form">
+          <view class="input-group {{userid_focus ? 'active' : ''}}">
+            <text class="input-label">学号</text>
+            <input type="number" id="userid" value="{{username}}" maxlength="10" placeholder="例如：1160399193" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="input-group {{passwd_focus ? 'active' : ''}}">
+            <text class="input-label">密码</text>
+            <input password="true" id="passwd" value="{{password}}" placeholder="初始密码为身份证后6位" bindinput="passwdInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="login-help" bindtap="showHelp">
+            <text>帮助</text>
+            <image class="login-help-img" src="../res/more/help.png"></image>
+          </view>
+        </form>
+        <view class="confirm-btn" bindtap="bind">
+            <text>登录</text>
+        </view>
+      </view>
+
+      <view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
+        <view class="box">
+          <view class="box-hd">
+            <text class="box-title">帮助</text>
+            <image class="box-close" src="../res/more/close.png" bindtap="hideHelp"></image>
+          </view>
+          <view class="box-bd">
+            <view class="help-q">1、帐号和密码是什么？</view>
+            <view class="help-a">
+              <text>帐号：学号（校园一卡通卡号）</text>
+              <text>密码：初始密码或者已更改密码</text>
+              <text>其中初始密码与个人身份证号码相关，采用以下规则：①身份证号码：取最后6位作为密码；②身份证号码最后一位是x的默认大写；</text>
+            </view>
+            <view class="help-q">2、忘记/更改密码？</view>
+            <view class="help-a">
+              <text>请访问统一身份认证平台 <text class="click-search" bindlongtap='copya'>authserver.zust.edu.cn/authserver/index.do</text>进行忘记/更改密码操作</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+</view>
+
+
+
+<!--view class="page__hd">
+  <image class="weui-media-box__thumb" src="../res/core/set.png" />
+  <view class="page__title">统一验证登录</view>
+  <view class="page__desc">设置后可使用教务系统，图书馆以及一卡通查询服务</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">学号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="例如：1160399193" value="{{username}}" bindinput="usernameInput" />
+      </view>
+    </view>
+   
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      
+      <view class="weui-cell__bd">
+        <input class="weui-input" password='true' value="{{password}}" bindinput="passwordInput" />
+     </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input" style="padding:18rpx;">
+      <view class="weui-cell__hd">
+        <view class="weui-label">记住密码</view>
+      </view>
+      
+      <view class="weui-cell__bd">
+        <switch checked="{{isChecked}}" bindchange="switchchange1" style="padding-left:400rpx;"></switch>
+     </view>
+    </view>
+   
+    <view class="weui-cell weui-cell_input" style="padding:8px;">
+      <view class="weui-cell__hd">
+        <view class="weui-label">自动登录</view>
+      </view>
+      
+      <view class="weui-cell__bd">
+        <switch checked="{{autologin}}" bindchange="switchchange2" style="padding-left:400rpx;"></switch>
+     </view>
+    </view>
+  </view>
+
+  <view class="weui-cells__tips">* 默认密码为身份证后6位</view>
+  <view class="weui-cells__tips">* 记住密码请先阅读并同意 
+     <navigator url="/mypages/login/protocol/protocol" class="click-search">《隐私协议》</navigator>
+  </view>
+ 
+  <view class="button-sp-area">
+    <button bindtap="btnClick" class="weui-btn" type="primary" plain="true">登录</button>
+  </view>
+
+</view-->

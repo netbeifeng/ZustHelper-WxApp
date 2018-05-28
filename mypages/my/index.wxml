@@ -1,0 +1,88 @@
+<view class="mine-wrapper" style="display:flex;flex-direction:column;">
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image style="border-radius:50%;"  src="{{userInfo.avatarUrl}}" background-size="cover" wx:if="{{userInfo}}"></image>
+        <image style="border-radius:50%;" src="../res/profle.png" wx:else></image>
+      </view>
+      <view class="text">
+        <text wx:if="{{username}}">{{username}}</text>
+        <text wx:else>用户未授权</text>
+      </view>
+      <view class="text_small">
+         <text wx:if="{{userInfo}}">{{userInfo.nickName}}</text>
+        <text  wx:else>这个页面暂时还没什么用，请等待后续更新哈</text>
+      </view>
+    </view>
+  </view>
+
+  <view style="margin:10px;padding:10px;background-color:	#F7F7F7;border-radius: 8px">
+    <view tyle="margin-top:-15px;display:flex;justify-content:space-between;" bindtap='showMore'>
+      <text style="font-size:15px;color:#b2b2b2">我的个人信息</text>
+      <text style="margin-left:398rpx;font-size:12px;color:#b2b2b2" wx:if="{{!sMore}}">显示更多</text>
+            <text style="margin-left:398rpx;font-size:12px;color:#b2b2b2" wx:else>收起信息</text>
+    </view>
+
+    <view style="margin-top:8px;display:flex;justify-content:space-between;">
+      <text style="font-size:18px;color:#353535;" wx:if="{{username}}">姓名</text>
+      <text style="font-size:18px;color:#353535;" wx:else>姓名</text><text>{{name}}</text>
+    </view>
+    <view style="margin-top:8px;display:flex;justify-content:space-between;">
+      <text style="font-size:18px;color:#353535;" wx:if="{{username}}">性别</text>
+      <text style="font-size:18px;color:#353535;" wx:else>性别</text><text>{{info.xb}}</text>
+    </view>
+    <view style="margin-top:8px;display:flex;justify-content:space-between;">
+      <text style="font-size:18px;color:#353535;" wx:if="{{username}}">学院</text>
+      <text style="font-size:18px;color:#353535;" wx:else>学院</text><text>{{info.xy}}</text>
+    </view>
+    <view style="margin-top:8px;display:flex;justify-content:space-between;">
+      <text style="font-size:18px;color:#353535;" wx:if="{{username}}">班级</text>
+      <text style="font-size:18px;color:#353535;" wx:else>班级</text><text>{{info.xzb}}</text>
+    </view>
+    <view style="margin-top:8px;display:flex;justify-content:space-between;" bindtap="displayBalance">
+      <text style="font-size:18px;color:#353535;" wx:if="{{username}}">一卡通余额</text>
+      <text style="font-size:18px;color:#353535;" wx:else>一卡通余额</text><text wx:if="{{display}}">{{balance}}</text><text wx:else>点击显示</text>
+    </view>
+
+    <view style="margin-top:8px;display:flex;justify-content:space-between;" wx:if="{{sMore}}">
+
+      <text style="font-size:18px;color:#353535;">专业</text><text>{{info.zymc}}</text>
+    </view>
+
+    <view style="margin-top:8px;display:flex;justify-content:space-between;" wx:if="{{sMore}}">
+
+      <text style="font-size:18px;color:#353535;">学制</text><text>{{info.xz}}</text>
+    </view>
+
+
+    <view style="margin-top:8px;display:flex;justify-content:space-between;" wx:if="{{sMore}}">
+
+      <text style="font-size:18px;color:#353535;">入学日期</text><text>{{info.rxrq}}</text>
+    </view>
+
+    <view style="margin-top:8px;display:flex;justify-content:space-between;" wx:if="{{sMore}}">
+
+      <text style="font-size:18px;color:#353535;">来源省份</text><text>{{info.lydq}}</text>
+    </view>
+  </view>
+
+  <view style="margin:10px;padding:10px;background-color:#F7F7F7;border-radius: 8px">
+    <view>
+      <text style="font-size:15px;color:#b2b2b2">授权及其它</text>
+    </view>
+
+    <view hover-class="hover" style="margin-top:8px" bindtap="wxLogin">
+      <text style="font-size:18px;color:#353535;">用户授权管理\n</text>
+      <text style="font-size:12px;color:#b2b2b2;padding-left:8px">想使用你的昵称和头像，在这里进行用户授权哦~</text>
+    </view>
+    <view hover-class="hover" style="margin-top:8px" bindtap="linkToLog">
+      <text style="font-size:18px;color:#353535;">更新日志</text>
+    </view>
+    <view hover-class="hover" style="margin-top:8px;" bindtap="deleteSto">
+      <text style="font-size:18px;color:#e64340;">清除数据</text> 
+      <image src="../res/delete.png" style="height:25px;width:25px;padding-left:400rpx;"></image>
+      <text style="font-size:12px;color:#b2b2b2;padding-left:8rpx">\n   已使用储存空间{{size}}kb</text>
+    </view>
+  </view>
+
+</view>

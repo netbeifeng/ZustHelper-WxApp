@@ -1,0 +1,31 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../res/core/exam.png" />
+  <view class="page__desc">考得不错，下次也要加油哦！</view>
+</view>
+<view class="weui-panel__bd">
+
+  <view class="weui-media-box weui-media-box_text">
+  <view class="weui-media-box__Bold" style="display:flex;justify-content:space_between;">
+    平均学分绩点：<text style="color:red;">{{sum.pjxfjd}}</text>
+    <view style="margin-left:50rpx;">学分绩点总和：<text style="color:red;">{{sum.xfjdzh}}</text></view>
+    </view>
+  </view>
+
+  <view wx:for="{{gradeRes}}" wx:for-item="list" wx:key="index" class="weui-media-box weui-media-box_text">
+    <view class="weui-media-box__title weui-media-box__title"> {{list.k_xuenian}} 学年 第 {{list.k_xueqi}} 学期</view>
+    <view class="weui-media-box__info">
+      <view class="weui-media-box__Bold">{{list.k_kcname}}</view>
+      <view class="weui-media-box__text">学院：{{list.k_bumen}} / {{list.k_isBixiu}}</view>
+      <view class="weui-media-box__text">学分：{{list.k_xuefen}}</view>
+      <view wx:if="{{Onhide}}" class="weui-media-box__text">{{list.k_chongxiu}} 补考成绩：<text style="font-weight:bold;">{{list.k_bukao}}</text></view>
+      <view class="weui-media-box__right">
+        成绩：<text>{{list.k_chengji}}\t\t\t\t\t</text> 绩点：<text>{{list.k_jidian}}</text></view>
+    </view>
+  </view>
+
+
+  <view class="button-sp-area">
+    <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+     <button class="weui-btn" type="default" plain="true" bindtap="changeHide">查询补考成绩</button>
+  </view>
+</view>

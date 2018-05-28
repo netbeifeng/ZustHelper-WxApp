@@ -1,0 +1,59 @@
+.avatar-wrapper {
+  background: #FFD700;
+  padding: 25px 0;
+}
+
+.avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.avatar-wrapper .avatar image {
+  width: 70px;
+  height: 70px;
+}
+
+.avatar-wrapper .text {
+  text-align: center;
+  color: #fff;
+
+}
+.avatar-wrapper .text_small {
+  margin-top: -3px;
+
+  text-align: center;
+  color: #fff;
+  font-size: small;
+}
+.weui-cell__hd image {
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+}
+
+.weui-cells::before{
+  border-top: none;
+}
+.trr{
+padding:40px 40px; 
+margin-top: 50px;
+margin-left:10px;
+margin-right: 10px; 
+background:#FFD700;
+width:315px;
+border-radius:5px; 
+}
+
+.text1{
+margin-left: 5px;
+}
+
+.hover{
+background-color:	#F4F4F4;
+}

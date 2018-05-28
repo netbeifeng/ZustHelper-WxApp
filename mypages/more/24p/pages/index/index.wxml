@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view style='background-color:#f8f8f8;'>
+<view class="containerss">
+  <view  bindtap="bindViewTap" class="userinfo">    
+    <view class="welcome">欢迎{{userInfo.nickName}}进入打发时间的24点小游戏</view>
+    <view wx:if = "{{lastScore}}">您上次玩的成绩是{{lastScore}}分</view>
+  </view>
+  <view class="specification-box">
+    <text class="specification">{{specification}}</text>
+    <view class="grade-box">请选择难易等级：</view>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{gradeArr}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+      </radio-group>
+  </view>
+   <view class="page-bottom">        
+        <button class="page-btn" bindtap="gotoCount">现在就开始玩吧</button>
+    </view>
+</view>
+
+</view>

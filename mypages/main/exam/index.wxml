@@ -1,0 +1,26 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../res/core/exam.png" />
+  <view class="page__desc">考场冲突请联系教务，具体安排以实际情况为准，目前仅供查询补考考场</view>
+</view>
+<view class="weui-panel__bd">
+<view wx:if="{{noBuk}}" class="weui-media-box weui-media-box_text">
+<view class="weui-media-box__info"><view class="weui-media-box__Bold">{{noBuk}}</view></view>
+</view>
+<view wx:else>
+  <view wx:for="{{res}}" wx:for-item="list" wx:key="index" class="weui-media-box weui-media-box_text">
+
+    <view class="weui-media-box__title weui-media-box__title">{{list.k_kssj}}</view>
+    <view class="weui-media-box__info">
+      <view class="weui-media-box__Bold">{{list.k_ksm}}</view>
+      <view class="weui-media-box__text">{{list.k_ksdd}}</view>
+      <view class="weui-media-box__right">
+        座位号：<text>{{list.k_zwh}}</text></view>
+    </view>
+  </view>
+</view>
+  <view class="button-sp-area">
+    <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+  </view>
+    <view class="weui-cells__tips">* 目前仅提供<text style="font-weight:bold;">\t考场\t</text>查询，补考查询功能将在开学后1周左右开放。</view>
+
+</view>

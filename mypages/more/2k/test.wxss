@@ -1,0 +1,300 @@
+/*字体开始*/
+
+@font-face {
+  font-family: 'icomoon';
+  src: url(data:application/font-woff;charset=utf-8;base64,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) format('woff'), url('icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e900";
+}
+
+.icon-silence:before {
+  content: "\e901";
+}
+
+.icon-setting:before {
+  content: "\e902";
+}
+
+.icon-sound:before {
+  content: "\e903";
+}
+
+
+/*字体结束*/
+
+.container {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 10px;
+  padding-top: 0;
+  width: 100%;
+  height: 100%;
+  background: #F8F1E9;
+  overflow: hidden;
+}
+
+.container .score-btns {
+  box-sizing: border-box;
+  width: 100%;
+  height: 140px;
+  color: #fff;
+  margin-top: 30rpx;
+}
+
+.container .score-btns .score {
+  float: left;
+  margin-right: 10px;
+  height: 140px;
+  background: #EDC818;
+  border-radius: 4px;
+}
+
+.score-btns .score .label {
+  display: block;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.score-btns .score .value {
+  display: block;
+  width: 100%;
+  height: 88px;
+  line-height: 88px;
+  text-align: center;
+  font-size: 54px;
+}
+
+.container .score-btns .btns {
+  box-sizing: border-box;
+  float: left;
+  padding: 10px;
+  width: 140px;
+  height: 140px;
+  border-radius: 4px;
+  background: #D8D8D8;
+}
+
+.score-btns .btns .icon {
+  display: block;
+  float: left;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  background: #B5B5B5;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.score-btns .btns .icon.left {
+  margin-right: 10px;
+}
+
+.score-btns .btns .rounds {
+  height: 55px;
+}
+
+.score-btns .btns .btn-reset {
+  margin-top: 10px;
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background: #F57900;
+  color: #fff;
+}
+
+.game-wrap {
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  background: #B9AD9F;
+  border: 2px solid #B9AD9F;
+  border-radius: 4px;
+}
+
+.game-wrap .game-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-container .cell-grid {
+  position: absolute;
+  float: left;
+  display: block;
+  background: #B9AD9F;
+  border: 2px solid #B9AD9F;
+  box-sizing: border-box;
+}
+
+.game-container .cell-grid .cell-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: #CBBFB1;
+}
+
+.cell-wrap .cell {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.cell-wrap .cell >.number {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #000;
+}
+
+
+/*弹出层*/
+
+.popout .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.4;
+}
+
+.popout .content {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 991;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 280px;
+  height: 320px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.popout .content .icon-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.popout .content button {
+  margin-top: 20px;
+  background: #FF9B3E;
+  color: #fff;
+}
+
+
+/*颜色配置*/
+
+.cell-2 {
+  background: #F3DBAF !important;
+}
+
+.cell-4 {
+  background: #EFAE74 !important;
+}
+
+.cell-8 {
+  background: #EE8E51 !important;
+}
+
+.cell-16 {
+  background: #F57900 !important;
+}
+
+.cell-32 {
+  background: #DCC315 !important;
+}
+
+.cell-64 {
+  background: #F4EAA3 !important;
+}
+
+.cell-128 {
+  background: #D4FB79 !important;
+}
+
+.cell-256 {
+  background: #5CD6D8 !important;
+}
+
+.cell-512 {
+  background: #FFFB78 !important;
+}
+
+.cell-1024 {
+  background: #00FA92 !important;
+}
+
+.cell-2048 {
+  background: #FF9300 !important;
+}
+
+.cell-4096 {
+  background: #008F00 !important;
+}
+
+.cell-8192 {
+  background: #76D6FF !important;
+}
+
+.cell-16384 {
+  background: #942193 !important;
+}
+
+.cell-32768 {
+  background: #009051 !important;
+}
+
+.cell-65536 {
+  background: #941100 !important;
+}

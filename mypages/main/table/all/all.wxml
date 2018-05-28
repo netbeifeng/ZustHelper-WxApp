@@ -1,0 +1,127 @@
+<view class="table">
+  <view class="tr">
+    <view class="th idx"></view>
+    <view class="th">周一</view>
+    <view class="th">周二</view>
+    <view class="th">周三</view>
+    <view class="th">周四</view>
+    <view class="th">周五</view>
+    <view class="th">周六</view>
+    <view class="th">周日</view>
+  </view>
+
+   <view class="td"><text class="weui-bold">早上</text></view>
+ <view class="tr">
+     
+   <block wx:for="{{firstc}}" wx:for-item="i" wx:key="i_key">
+     <view class="td idx" wx:if="{{index == 0}}">{{index+1}}</view>
+         <view class="td">
+
+             <block wx:for="{{i}}" wx:for-item="j" wx:key="j_key" wx:for-index="a">
+
+
+          
+              <text wx:if="{{a == 0 }}" class="weui-bold">{{j}}\n</text>
+              <text wx:else>{{j}}\n</text>
+             </block>
+         </view>
+   </block> 
+ </view>
+
+ <view class="tr">
+   <block wx:for="{{secondc}}" wx:for-item="i" wx:key="i_key">
+     <view class="td idx" wx:if="{{index == 0}}">{{index+2}}</view>
+         <view class="td">
+
+             
+             <block wx:for="{{i}}" wx:for-item="j" wx:key="j_key" wx:for-index="a">
+
+
+          
+              <text wx:if="{{a == 0 }}" class="weui-bold">{{j}}\n</text>
+              <text wx:else>{{j}}\n</text>
+
+             </block>
+         </view>
+   </block> 
+ </view>
+
+ <view class="td"><text class="weui-bold">下午</text></view>
+
+
+ <view class="tr">
+   <block wx:for="{{thirdc}}" wx:for-item="i" wx:key="i_key">
+     <view class="td idx" wx:if="{{index == 0}}">{{index+3}}</view>
+         <view class="td">
+
+             
+             <block wx:for="{{i}}" wx:for-item="j" wx:key="j_key" wx:for-index="a">
+
+
+          
+              <text wx:if="{{a == 0 }}" class="weui-bold">{{j}}\n</text>
+              <text wx:else>{{j}}\n</text>
+
+             </block>
+         </view>
+   </block> 
+ </view>
+
+
+  <view class="tr">
+   <block wx:for="{{fourthc}}" wx:for-item="i" wx:key="i_key">
+     <view class="td idx" wx:if="{{index == 0}}">{{index+4}}</view>
+         <view class="td">
+
+             
+             <block wx:for="{{i}}" wx:for-item="j" wx:key="j_key" wx:for-index="a">
+
+
+          
+              <text wx:if="{{a == 0 }}" class="weui-bold">{{j}}\n</text>
+              <text wx:else>{{j}}\n</text>
+
+             </block>
+         </view>
+   </block> 
+ </view>
+ <view class="td"><text class="weui-bold">晚上</text></view>
+ <view class="tr">
+   <block wx:for="{{fifthc}}" wx:for-item="i" wx:key="i_key">
+     <view class="td idx" wx:if="{{index == 0}}">{{index+5}}</view>
+         <view class="td">
+
+             
+             <block wx:for="{{i}}" wx:for-item="j" wx:key="j_key" wx:for-index="a">
+
+
+          
+              <text wx:if="{{a == 0 }}" class="weui-bold">{{j}}\n</text>
+              <text wx:else>{{j}}\n</text>
+
+             </block>
+         </view>
+   </block> 
+ </view>
+</view>
+
+ <view class="th"><text class="weui-bold">实验课</text></view>
+<view class="table">
+
+
+   <view class="tr">
+   <block wx:for="{{expc}}" wx:for-item="i" wx:key="i_key">
+     <view class="td idx" wx:if="{{index == 0}}">实验课</view>
+         <view class="td">
+         <block wx:for="{{i}}" wx:for-item="j" wx:key="j_key" wx:for-index="a">
+
+              <text wx:if="{{a==0}}" class="weui-bold">{{j}}\n</text>
+              <text wx:else>{{j}}\n</text>
+        </block>
+         </view>
+   </block> 
+ </view>
+ </view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="default" plain="true">分享查询结果</button>
+</view>

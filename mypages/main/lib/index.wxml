@@ -1,0 +1,23 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../res/core/lib.png" />
+  <view class="page__title">图书馆藏</view>
+  <view class="page__desc">输入作者，书名，出版日期，出版社（不同关键词以空格隔开）</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">关键词</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="例如：C语言 谭浩强 清华大学出版社" value="{{searchKey}}" bindinput="searchKeyInput" />
+      </view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button bindtap="search" class="weui-btn" type="primary" plain="true">查询书籍</button>
+    <button bindtap="my" class="weui-btn" type="default" plain="true">我的图书馆</button>
+  </view>
+   <view class="weui-cells__tips">* 尽量输入详细一点的关键词</view>
+
+</view>

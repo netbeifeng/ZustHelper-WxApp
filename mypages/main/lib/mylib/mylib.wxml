@@ -1,0 +1,56 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../res/core/lib.png" />
+  <view class="page__title">我的图书馆</view>
+  <view class="page__desc"></view>
+</view>
+<view class="page__bd">
+  <view class="weui-panel__hd" style="margin-top:30rpx;">基本信息</view>
+   <view class="page__desc">已借：<text class="assh">{{baseinfo.xianjie}}</text> /  可借：<text class="assh">{{10-baseinfo.xianjie}}</text> 超期：<text class="assh">{{baseinfo.chaoqi}}</text> /  欠款：<text class="assh">{{baseinfo.qiankuan}}</text></view>
+
+
+<view class="weui-panel" wx:if="{{pageinfo}}">
+  <view class="weui-panel__hd">查询结果</view>
+    <view class="weui-panel__bd">
+      <navigator url="../res/detail/detail?linkid={{book.link}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{pageinfo}}" wx:key="*this" wx:for-item="book">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book.sm}}</view>
+          <view class="weui-media-box__desc">借书日期：{{book.jsrq}}</view>
+          <view class="weui-media-box__desc">还书日期：{{book.hsrq}}</view>
+          <view class="weui-media-box__desc">{{book.canxujie}} / {{book.cqqk}}</view>
+        </view>
+      </navigator>
+
+      <navigator url="../res/detail/detail?linkid={{book.link}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{pageinfos}}" wx:key="*this" wx:for-item="book" wx:if="{{pageinfos}}">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 5}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book.sm}}</view>
+          <view class="weui-media-box__desc">借书日期：{{book.jsrq}}</view>
+          <view class="weui-media-box__desc">还书日期：{{book.hsrq}}</view>
+          <view class="weui-media-box__desc">{{book.canxujie}} / {{book.cqqk}}</view>
+        </view>
+      </navigator>
+
+      <navigator url="../res/detail/detail?linkid={{book.link}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{pageinfot}}" wx:key="*this" wx:for-item="book" wx:if="{{pageinfot}}">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{book.sm}}</view>
+          <view class="weui-media-box__desc">借书日期：{{book.jsrq}}</view>
+          <view class="weui-media-box__desc">还书日期：{{book.hsrq}}</view>
+          <view class="weui-media-box__desc">{{book.canxujie}} / {{book.cqqk}}</view>
+        </view>
+      </navigator>
+
+    </view>
+</view>
+
+
+</view>
+
+<text>\n</text>

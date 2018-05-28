@@ -1,0 +1,38 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../res/core/lib.png" />
+  <view class="page__title">一卡通服务</view>
+  <view class="page__desc">提供最近的一些流水查询</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+    <view class="container">
+     <view class="ykt-card">
+            <view class="ykt-black-line"></view>
+            <view class="ykt-content">
+                <view class="ykt-ye">
+                    <text class="ykt-ye-name">余额</text>
+                    <view class="ykt-ye-money">
+                        <text class="ykt-ye-value">{{balance}}</text>元
+                    </view>
+                </view>
+                <view class="ykt-img">
+                    <image src="../../res/card-bg.png"></image>
+                </view>
+            </view>
+            <view class="ykt-card-more">
+                <text class="ykt-ye-time">截至时间：{{last_time}}</text>
+                <text class="ykt-ye-id">卡号：{{account}}</text>
+            </view>
+        </view>
+    </view>
+
+    
+
+      
+  </view>
+  <view class="button-sp-area">
+    <button bindtap="search" class="weui-btn" type="primary" plain="true">查询最近一星期流水</button>
+  </view>
+   <view class="weui-cells__tips"></view>
+
+</view>

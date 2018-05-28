@@ -1,0 +1,27 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../res/core/lib.png" />
+  <view class="page__title">信息查询</view>
+  <view class="page__desc">目前仅提供校车及院历，未来将开放后勤保修，电费充值等服务</view>
+</view>
+<view class="page__bd">
+
+  <view class="button-sp-area">
+    <button bindtap="searchcal" class="weui-btn" type="primary" plain="true">查询院历</button>
+  </view>
+
+  <view class="button-sp-area">
+    <button bindtap="searchbus" class="weui-btn" type="deault" plain="true">查询校车</button>
+  </view>
+
+ <view class="button-sp-area">
+    <button bindtap="topower" class="weui-btn" type="primary" plain="true">电费查询(小和山)</button>
+  </view>
+
+    <view class="button-sp-area">
+    <button bindtap="searchmap" class="button2" type="deault" plain="true">校园地图</button>
+  </view>
+   <view class="weui-cells__tips">*</view>
+   <view style="text-align:center;">
+   </view>
+    
+</view>

@@ -1,0 +1,12 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../res/core/lib.png" />
+  <view class="page__title">校车</view>
+  <view class="page__desc"></view>
+</view>
+<view class="page__bd">
+   <view class="weui-cells__tips"></view>
+   <view style="text-align:center;">
+    <image src="../../../res/bustable.jpg" mode="scaleToFill" style="height:4900rpx;width:100%;margin-top:-7rpx;"></image>
+   </view>
+    
+</view>

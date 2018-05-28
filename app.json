@@ -1,0 +1,74 @@
+{
+    "pages": [
+    "mypages/index/index",
+    "mypages/more/help/help",
+    "mypages/more/about/about",
+    "mypages/more/index",
+    "mypages/my/index",
+    "mypages/more/2k/test",
+    "mypages/more/sudo/pages/index/index",
+    "mypages/more/sudo/pages/rank/index",
+    "mypages/more/sudo/pages/setting/index",
+    "mypages/more/sudo/pages/about/index",
+    "mypages/more/sudo/pages/record/index",
+    "mypages/more/24p/pages/index/index",
+    "mypages/more/24p/pages/count/count",
+    "mypages/my/log/log",
+    "mypages/login/index",
+    "mypages/main/search/calendar/index/index",
+    "mypages/main/table/index",
+    "mypages/main/room/index",
+    "mypages/main/lib/index",
+    "mypages/main/exam/index",
+    "mypages/main/grade/index",
+    "mypages/main/ykt/index",
+    "mypages/main/cet/index",
+    "mypages/main/search/index",
+    "mypages/main/search/bus/bus",
+    "mypages/main/table/today/today",
+    "mypages/main/table/all/all",
+    "mypages/main/table/allo/allo",
+    "mypages/main/room/res/res",
+    "mypages/main/lib/res/res",
+    "mypages/main/lib/res/detail/detail",
+    "mypages/main/lib/mylib/mylib",
+    "mypages/main/grade/res/res",
+    "mypages/main/search/map/map",
+    "mypages/main/search/power/power",
+    "mypages/main/search/power/res/res",
+    "mypages/main/ykt/flow/flow"
+  ],
+  
+    "window": {
+      "navigationBarBackgroundColor": "#FFD700",
+      "navigationBarTitleText": "浙科院校园助手",
+      "navigationBarTextStyle": "white",
+      "backgroundColor": "#FFD700",
+      "backgroundTextStyle":"light"
+    },
+    "tabBar": {
+      "selectedColor": "#FFD700",
+      "list": [
+        {
+          "pagePath": "mypages/index/index",
+          "iconPath": "mypages/res/tabbar/index.png",
+          "selectedIconPath": "mypages/res/tabbar/index@select.png",
+          "text": "课表首页"
+        },
+        {
+          "pagePath": "mypages/my/index",
+          "iconPath": "mypages/res/tabbar/user.png",
+          "selectedIconPath": "mypages/res/tabbar/user@select.png",
+          "text": "我的"
+        },
+        {
+          "pagePath": "mypages/more/index",
+          "iconPath": "mypages/res/tabbar/more.png",
+          "selectedIconPath": "mypages/res/tabbar/more@select.png",
+          "text": "发现更多"
+        }
+      ]
+    }
+  
+
+}

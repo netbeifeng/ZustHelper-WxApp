@@ -1,0 +1,148 @@
+
+<view class="circle">
+    
+      <image class="alige" src="../more/about/image/logo_school.png" mode="aspectFit" >     
+      </image>  
+  
+  
+  <view class="page__hd">
+    <view class="weui-panel border-shadow">
+      
+        <view class="weui-panel__hd" bindtap="changeCampus">
+          {{theDay}}
+          <image style="height:42rpx;width:42rpx;display:inline-block;verticle-align:middle;" src="../res/set_icon.png" />
+        </view>
+
+      <view class="weui-panel__bd">
+        <view class="weui-media-box" wx:if="{{zeichen == null}}">
+          <button bindtap="setTodayClassName" class="weui-btn" style='border-radius:17rpx;' type="primary" plain="true">登录教务系统</button>
+          <view class="weui-cells__tips">* 如已设置完成，请下拉刷新课程信息</view>
+          <view class="weui-cells__tips">* 安吉校区的同学，请点击右上角齿轮更换校区</view>
+        </view>
+        <view class="weui-media-box weui-media-box_appmsg" wx:else>
+          <block wx:if="{{now == 'error'}}">
+            <view class="weui-media-box__hd_in-appmsg">
+              ⚠
+            </view>
+            <view class="weui-media-box_text" style="margin-left:33rpx;">
+              还没有查过课表哦~
+            </view>
+          </block>
+          <block wx:elif="{{now == 'null'}}">
+            <view class="weui-media-box__hd_in-appmsg">
+              {{nowClass}}
+            </view>
+            <view class="weui-media-box_text" style="margin-left:36rpx;">
+              目前没课，休息一下吧~
+            </view>
+          </block>
+          <block wx:else>
+           第<view class="weui-media-box__hd_in-appmsg">
+             {{nowClass}}
+            </view>大节     
+            <view class="weui-media-box_text">
+              <block style="margin-left:100rpx;">
+                <view class="weui-media-box__title weui-media-box__title_in-text" style="margin-left:40rpx;">{{now[0]}}</view>
+                <view class="weui-media-box__info" style="margin-left:20rpx;">
+                  <view class="weui-media-box__desc weui-media-box__info__meta" style="margin-left:20rpx;">
+                    <image style="height:24rpx;width:24rpx;vertical-align:middle;" src="../res/location_icon.png" /> {{now[3]}}</view>
+                  <view class="weui-media-box__desc weui-media-box__info__meta_extra" style="margin-left:20rpx;">
+                     {{now[2]}}</view>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd">
+
+    <view style="padding:5rpx 40rpx;" wx:if="{{help == 'null'}}">
+      <button bindtap="toHelp" class="weui-btn" style="font-size:26rpx;" type="default" plain="true" wx:if="{{help=='null'}}">初次使用，不如看下使用帮助？</button>
+    </view>
+    <view style="padding:5rpx 40rpx;" wx:if="{{help == 'data'}}">
+      <button bindtap="toAll" class="weui-btn" style="font-size:26rpx;" type="default" plain="true" wx:if="{{help=='data'}}">一键查询全部课表</button>
+    </view>
+
+    <view class="weui-panel" bindtap='loginin'>
+      <view class="weui-grids">
+        <navigator url="/mypages/main/table/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/table.png" />
+          <view class="weui-grid__label">课表</view>
+        </navigator>
+        <navigator url="/mypages/main/room/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/room.png" />
+          <view class="weui-grid__label">空教室</view>
+        </navigator>
+        <navigator url="/mypages/main/lib/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/lib.png" />
+          <view class="weui-grid__label">图书馆</view>
+        </navigator>
+        <navigator url="/mypages/main/exam/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/exam.png" />
+          <view class="weui-grid__label">考场</view>
+        </navigator>
+        <navigator url="/mypages/main/grade/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/test.png" />
+          <view class="weui-grid__label">成绩</view>
+        </navigator>
+        <navigator url="/mypages/main/ykt/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/id.png" />
+          <view class="weui-grid__label">一卡通</view>
+        </navigator>
+        <navigator url="/mypages/main/cet/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/cet.png" />
+          <view class="weui-grid__label">等级考试</view>
+        </navigator>
+         <navigator url="/mypages/main/search/index" class="weui-grid" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../res/tabbar/info.png" />
+          <view class="weui-grid__label">校园信息</view>
+        </navigator>
+      </view>
+    </view>
+
+    <block>
+      <view class="weui-panel">
+        <view class="weui-panel__hd">
+          <image style="height:32rpx;width:32rpx;vertical-align:middle;margin-right:16rpx;" src="../res/info_icon.png" />
+          <text>期末考场安排已经可以查询了哦！</text>
+        </view>
+      </view>
+    </block>
+
+
+    <block>
+      <view class="weui-panel">
+        <view class="weui-panel__hd">
+          <image style="height:32rpx;width:32rpx;vertical-align:middle;margin-right:16rpx;" src="../res/info_icon.png" />
+          <text>学校服务器不稳定，如果查询失败请到「发现更多」--> 「统一认证登录」中重新登录，再查询。</text>
+        </view>
+      </view>
+    </block>
+
+
+
+ <block>
+      <view class="weui-panel">
+        <view class="weui-panel__hd">
+          <image style="height:32rpx;width:32rpx;vertical-align:middle;margin-right:16rpx;" src="../res/info_icon.png" />
+          <text>公告</text>
+        </view>
+        <block>
+          <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__desc">
+                <text>如果你觉得不错，欢迎推荐给身边的小伙伴们，各功能都尚处在测试阶段，功能也正在逐步增加中，立志成为浙科学子的小帮手。</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+
+
+    <view class="weui-footer weui-center">- 当前版本：v1.1.4 -</view>
+  </view>
+</view>

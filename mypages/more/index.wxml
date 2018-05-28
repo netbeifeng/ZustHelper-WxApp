@@ -1,0 +1,84 @@
+<view class="circle">
+  <view class="page__hd">
+    <navigator url="/mypages/login/index" hover-class="none">
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              统一认证登录
+            </view>
+            <view class="weui-item__desc">Uniform Login</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="../res/search_icon.png" />
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/mypages/more/help/help" hover-class="none">
+      <view class="weui-item border-shadow background-2">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              使用帮助
+            </view>
+            <view class="weui-item__desc">Instructions</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="../res/help_icon.png" />
+          </view>
+        </view>
+      </view>
+    </navigator>
+    <button class="clear" bindtap='toGame'>
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              小游戏
+            </view>
+            <view class="weui-item__desc">Mini-Games</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="../res/joy.png" />
+          </view>
+        </view>
+      </view>
+    </button>
+    <button class="clear" open-type="share">
+      <view class="weui-item border-shadow background-2">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              分享课表
+            </view>
+            <view class="weui-item__desc">Share</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="../res/share_icon.png" />
+          </view>
+        </view>
+      </view>
+    </button>
+    <navigator url="/mypages/more/about/about" hover-class="none">
+      <view class="weui-item border-shadow background-1">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="weui-item__title">
+              关于课表
+            </view>
+            <view class="weui-item__desc">About</view>
+          </view>
+          <view class="weui-flex__item">
+            <image class="weui-media-box__thumb" style="width:80rpx;height:80rpx;float:right;" src="../res/about_icon.png" />
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="page__bd">
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__text">Powered by zust.edu.cn</view>
+    </view>
+  </view>
+</view>

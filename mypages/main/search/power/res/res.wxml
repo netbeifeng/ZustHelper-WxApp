@@ -1,0 +1,79 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../../res/core/lightning.png" />
+  <view class="page__title">电量查询</view>
+  <view class="page__desc">欢迎您使用本系统，由科源后勤提供支持</view>
+</view>
+<view class="page__bd">
+  <view class="weui-cells">
+   
+
+            <view class="weui-cell weui-cell_select">
+              <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">公寓</view>
+              </view>
+              <view class="weui-cell__bd">
+                <picker name="gyPicker" value="{{gyIndex}}" bindchange="gyPicker" range="{{gy}}">
+                  <view class="weui-select weui-select_in-select-after">{{gy[gyIndex]}}</view>
+                </picker>
+              </view>
+            </view>
+
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">寝室号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="" value="{{roomNum}}" bindinput="roomNumInput" />
+      </view>
+    </view>
+
+                <view class="weui-cell weui-cell_select">
+              <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">金额</view>
+              </view>
+              <view class="weui-cell__bd">
+                <picker name="moPicker" value="{{moIndex}}" bindchange="moPicker" range="{{mo}}">
+                  <view class="weui-select weui-select_in-select-after">{{mo[moIndex]}}</view>
+                </picker>
+              </view>
+            </view>
+    
+  </view>
+
+ 
+<view class="weui-cells__tips">* 例：西和5号楼311房间，输入 <text style='font-weight:bold;'>5311</text></view>
+ <view class="weui-cells__tips">* 电费充值每人(每房间)每日只能充值<text style='font-weight:bold;'>\t\t一次</text></view>
+ <view class="weui-cells__tips">* 每日凌晨5:00-8:00系统更新时间,无法充值、送电,23点后停止充值</view>
+  <view class="weui-cells__tips">* 不要重复操作，若出现“时间间隔太短”，请稍等1-2分钟，再进行操作</view>
+
+  <view class="button-sp-area">
+    <button bindtap="searchPower" class="weui-btn" type="primary" plain="true">查询电量</button>
+  </view>
+  <view>
+    <button bindtap="SendPower" class="weui-btn loginBtn" type="default" plain="true">动力送电</button>
+    <button bindtap="SendLight" class="weui-btn registerBtn" type="default" plain="true">照明送电</button>
+  </view>
+    <view class="button-sp-area2">
+    <button bindtap="charge" class="weui-btn" type="primary" plain="true">电费充值</button>
+  </view>
+
+
+  <view style="margin:15px;padding:10px;background-color:#F7F7F7;border-radius: 8px;">
+    <view>
+      <text style="font-size:15px;color:#b2b2b2">查询结果</text>
+    </view>
+
+    <view style="margin-top:6px;" >
+      <text style="font-size:24px;color:#353535;font-weight:bold;">{{msg}}</text>
+    </view>
+
+
+  </view>
+
+
+</view>
+
+
+ <view class="weui-cells__tips" style="text-align: center;margin-bottom:19rpx;">Powered by v.kyjt.zust.edu.cn</view>
+

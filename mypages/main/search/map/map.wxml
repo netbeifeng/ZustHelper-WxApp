@@ -1,0 +1,12 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../res/core/lib.png" />
+  <view class="page__title">校园地图</view>
+  <view class="page__desc"></view>
+</view>
+<view class="page__bd">
+   <view class="weui-cells__tips"></view>
+   <view style="text-align:center;">
+    <image src="../../../res/map.jpg" mode="scaleToFill" style="width=1000rpx;margin-top:20rpx;"></image>
+   </view>
+    
+</view>

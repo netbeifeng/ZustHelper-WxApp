@@ -1,0 +1,62 @@
+<view class="circle">
+  <view class="page__hd">
+    <image class="weui-media-box__thumb" src="../../res/core/table.png" />
+    <view class="page__title">课表查询</view>
+    <view class="page__desc">课表数据来自学校官方教务网站</view>
+    <view class="weui-panel border-shadow">
+      <view class="weui-panel__bd">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+         
+          <view class="weui-cells__tips">* 当前学期默认为教务系统的当前学期哦
+          </view>
+          <view class="button-sp-area">
+            <button bindtap="searchToday" class="weui-btn" type="primary" plain="true">查询当日课表</button>
+            <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-cells">
+            <view class="weui-cell weui-cell_select">
+              <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">学年</view>
+              </view>
+              <view class="weui-cell__bd">
+                <picker name="xnPicker" value="{{xnIndex}}" bindchange="xnPicker" range="{{xn}}">
+                  <view class="weui-select weui-select_in-select-after">{{xn[xnIndex]}}</view>
+                </picker>
+              </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+              <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">学期</view>
+              </view>
+              <view class="weui-cell__bd">
+                <picker name="xqPicker" value="{{xqIndex}}" bindchange="xqPicker" range="{{xq}}">
+                  <view class="weui-select weui-select_in-select-after">{{xq[xqIndex]}}</view>
+                </picker>
+              </view>
+            </view>
+
+          </view>
+          <view class="button-sp-area">
+            <button bindtap="searchAll" class="weui-btn" type="default" plain="true">查询全部课表</button>
+          </view>
+          <view class="weui-cells__tips">* 请不要在这个页面查询当前学年的课表</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

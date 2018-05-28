@@ -1,0 +1,46 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../../res/core/lib.png" />
+  <view class="weui-media-box__title" style="font-size:40rpx;font-weight:bolder;color:#fff;">{{bookData[0][0].sm}}</view>
+  <view class="page__desc" style="font-size:30rpx;">{{bookData[0][0].zz}}</view>
+  
+</view>
+
+<view class="weui-panel__hd">书籍信息</view>
+<view class="page__desc" style="color:#383838;">索书号：<text style="font-weight:bold;color:#F4A460">{{bookData[0][0].ssh}}</text></view>
+<view class="page__desc" style="color:#383838;">借阅次数：{{bookData[0][0].jycs}}</view>
+<view class="page__desc" style="color:#383838;">出版社/出版时间：{{bookData[0][0].cbs}} / {{bookData[0][0].cbsj}}</view>
+<view class="page__desc" style="color:#383838;">价格：{{bookData[0][0].jg}}        ISBN：{{bookData[0][0].isbn}}</view>
+<view class="page__desc" style="color:#383838;">简介：<text>\n</text>    {{bookData[0][0].zy}}</view>
+
+
+
+<view class="weui-panel" wx:if="{{bookData[1]}}">
+  <view class="weui-panel__hd">馆藏信息</view>
+  <view class="weui-panel__bd">
+    <block wx:for="{{bookData[1]}}" wx:key="*this" wx:for-item="book">
+      <view class="weui-media-box weui-media-box_appmsg">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          {{index + 1}}
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__desc">{{book.local}}</view>
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="zan-capsule zan-capsule" style="float:right;">
+          <block wx:if="{{book.status == '不可借'}}">
+            <view class="zan-capsule__left">不可借</view>
+            <view class="zan-capsule__right">书刊状态</view>
+          </block>
+          <block wx:else>
+            <view class="zan-capsule__left" style="background:#ffd770;border-color:#ffd770">可借</view>
+            <view class="zan-capsule__right" style="color:#ffd770;border-color:#ffd770">书刊状态</view>
+          </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="button-sp-area">
+  <button open-type="share" class="weui-btn" type="primary" plain="true">分享书籍</button>
+</view>

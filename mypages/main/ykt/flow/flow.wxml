@@ -1,0 +1,21 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../../res/core/alert.png" />
+  <view class="page__desc">只提供最近三十条流水查询，更多信息请访问学校一卡通网站</view>
+</view>
+<view class="weui-panel__bd">
+  <view wx:for="{{flow}}" wx:for-item="list" wx:key="index" class="weui-media-box weui-media-box_text">
+  <view style="font-size:28rpx;">
+          第 {{index + 1}} 条
+  </view>
+    <view class="weui-media-box__title weui-media-box__title">{{list.OCCTIME}}</view>
+    <view class="weui-media-box__info">
+      <view class="weui-media-box__Bold">{{list.MERCNAME}}</view>
+      <view class="weui-media-box__text">{{list.TRANNAME}}</view>
+      <view class="weui-media-box__right">
+        消费：<text>{{list.TRANAMT}}</text></view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+  </view>
+</view>

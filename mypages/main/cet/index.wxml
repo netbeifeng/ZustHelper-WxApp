@@ -1,0 +1,18 @@
+<view class="page__hd">
+  <image class="weui-media-box__thumb" src="../../res/core/exam.png" />
+  <view class="page__desc">这里只提供教务系统中录入的成绩，刚出的成绩去指定网站查询哈</view>
+</view>
+<view class="weui-panel__bd">
+  <view wx:for="{{res}}" wx:for-item="list" wx:key="index" class="weui-media-box weui-media-box_text">
+    <view class="weui-media-box__title weui-media-box__title"> {{list.k_cxn}} 学年 第 {{list.k_cxq}} 学期</view>
+    <view class="weui-media-box__info">
+      <view class="weui-media-box__Bold">{{list.k_cmz}}</view>
+      <view class="weui-media-box__text">考试日期：{{list.k_ksrq}}</view>
+      <view class="weui-media-box__right">
+        分数：<text>{{list.k_fs}}</text></view>
+    </view>
+  </view>
+  <view class="button-sp-area">
+    <button open-type="share" class="weui-btn" type="primary" plain="true">分享查询结果</button>
+  </view>
+</view>
