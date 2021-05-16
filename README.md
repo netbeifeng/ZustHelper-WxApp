@@ -1,5 +1,5 @@
 # ZustHelper-WxApp
-[Java后端](https://github.com/netbeifeng/zustHelper_Java_Server)基于HttpClient爬虫，以及 PhantomJS 实现。 
+[Java后端](https://github.com/netbeifeng/ZustHelper-Java-Server)基于HttpClient爬虫，以及 PhantomJS 实现。 
 
 前端大部分fork自[文经课表](https://github.com/st1ven/WeApp-timeTable)，少部分页面（如电费充值，一卡通，图书馆等针对ZUST做了适配）
 
