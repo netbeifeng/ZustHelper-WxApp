@@ -12,10 +12,8 @@
     <view class="weui-article__p">· 考试安排数据来自学校教务系统</view>
     <view class="weui-article__p">· 一卡通数据来自学校一卡通系统</view>
     <view class="weui-article__p" style="color:#EEC900;">Devloper：</view>
-    <view class="weui-article__p">· 计算机国际161 Alex</view>
-    <view class="weui-article__p">· netbeifeng@163.com</view>
-    <view class="weui-article__p">目前课表的功能正在逐步增加中，立志成为浙科学子的小帮手。如果你在使用中有问题或建议，请点击下方联系客服。</view>
-    <view class="weui-article__p">随便说两句：起初是因为一个安卓的项目，突然就冒出了做一个校园助手这样的app这样的想法，学校虽然已经有掌上书院这款app，但是感觉实用的功能太少了，顾及到平台，想想RN，H5自然就想到了小程序了。程序的后端服务器代码使用Java，使用Servlet+tomcat+Nginx反向代理进行前后端通信，如果你想加入开发，十分欢迎，程序代码到现在还是一团糟，效率还有待提高呀，叹气~</view>
+    <view class="weui-article__p">· Chang Luo</view>
+    <view class="weui-article__p">· chang.luo@gmx.de</view>
     <view class="weui-article__p">前端UI设计参考：[课表]  十分感谢~</view>
     <view class="weui-article__p">前端代码引用：github [文经课表] 项目 </view>
     <view class="weui-center">
